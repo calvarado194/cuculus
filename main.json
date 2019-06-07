@@ -36,7 +36,8 @@
                                         "width": "200",
                                         "height": "20",
                                         "size": "12",
-                                        "background": "#ffffff"
+                                        "background": "#ffffff",
+                                        "color": "#000000"
                                     }
                                 },
                                 {
@@ -50,7 +51,8 @@
                                         "width": "200",
                                         "height": "20",
                                         "size": "12",
-                                        "background": "#ffffff"
+                                        "background": "#ffffff",
+                                        "color": "#000000"
                                     }
                                 },
                                 {
@@ -65,7 +67,8 @@
                                         "height": "20",
                                         "secure": true,
                                         "size": "12",
-                                        "background": "#ffffff"
+                                        "background": "#ffffff",
+                                        "color": "#000000"
                                     }
                                 },
                                 {
