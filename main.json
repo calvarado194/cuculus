@@ -1,96 +1,104 @@
 {
-  "$jason": {
-	  "head":{
-		"title": "Koel"
-	  },
-	  "body": {
-	    "background": "#000000",
-		"header":{
-		  "title": "Koel"
-		},
-		"sections":[{
-		  "items":[{
-	      "type": "vertical",
-          "style": {
-            "align": "center",
-			"width": "80%"
-          },
-          "components": [
-            {
-              "type": "image",
-              "url": "https://koel.phanan.net/dist/img/logo.svg",
-              "style": {
-                "width": "100"
-              }
+    "$jason": {
+        "head": {
+            "title": "Koel"
+        },
+        "body": {
+            "background": "#000000",
+            "header": {
+                "title": "Koel"
             },
-			{
-              "type": "textfield",
-			  "name": "base_url",
-			  "placeholder": "url",
-			  "style": {
-				"placeholder_color": "#cecece",
-				"font": "sans-serif",
-				"align": "center",
-				"width": "200",
-				"height": "20",
-				"size": "12"
-			  }
-            },
-			{
-              "type": "textfield",
-			  "name": "account",
-			  "placeholder": "account!",
-			  "style": {
-				"placeholder_color": "#cecece",
-				"font": "sans-serif",
-				"align": "center",
-				"width": "200",
-				"height": "20",
-				"size": "12"
-			  }
-            },
-            {
-              "type": "textfield",
-			  "name": "password",
-			  "placeholder": "password!",
-			  "style": {
-				"placeholder_color": "#cecece",
-				"font": "sans-serif",
-				"align": "center",
-				"width": "200",
-				"height": "20",
-				"secure": true,
-				"size": "12"
-			  }
-            },
-            {
-              "type": "button",
-              "text": "Log in and play",
-              "style": {
-                "color": "#ff0000",
-                "background": "#000000"
-              },
-			  "action":{
-			    "type": "$network.request",
-				"options": {
-				  "method": "post",
-				  "url": "{{$get.base_url+'/api/me'}}",
-				  "data": {
-				    "email": "{{$get.account}}",
-					"password": "{{$get.password}}"
-				  }
-				},
-				"success": {
-				  "type": "$utils.alert",
-				  "options": {
-				    "text": "{{$jason.token}}",
-					"type": "warning"
-				  }
-				}
-			  }
-            }]
-		  }]		  
-		}]
-	  }
-	}
+            "sections": [
+                {
+                    "items": [
+                        {
+                            "type": "vertical",
+                            "style": {
+                                "align": "center",
+                                "width": "80%"
+                            },
+                            "components": [
+                                {
+                                    "type": "image",
+                                    "url": "https://koel.phanan.net/dist/img/logo.svg",
+                                    "style": {
+                                        "width": "100"
+                                    }
+                                },
+                                {
+                                    "type": "textfield",
+                                    "name": "base_url",
+                                    "placeholder": "url",
+                                    "style": {
+                                        "placeholder_color": "#cecece",
+                                        "font": "sans-serif",
+                                        "align": "center",
+                                        "width": "200",
+                                        "height": "20",
+                                        "size": "12",
+                                        "background": "#ffffff"
+                                    }
+                                },
+                                {
+                                    "type": "textfield",
+                                    "name": "account",
+                                    "placeholder": "account!",
+                                    "style": {
+                                        "placeholder_color": "#cecece",
+                                        "font": "sans-serif",
+                                        "align": "center",
+                                        "width": "200",
+                                        "height": "20",
+                                        "size": "12",
+                                        "background": "#ffffff"
+                                    }
+                                },
+                                {
+                                    "type": "textfield",
+                                    "name": "password",
+                                    "placeholder": "password!",
+                                    "style": {
+                                        "placeholder_color": "#cecece",
+                                        "font": "sans-serif",
+                                        "align": "center",
+                                        "width": "200",
+                                        "height": "20",
+                                        "secure": true,
+                                        "size": "12",
+                                        "background": "#ffffff"
+                                    }
+                                },
+                                {
+                                    "type": "button",
+                                    "text": "Log in and play",
+                                    "style": {
+                                        "color": "#ff0000",
+                                        "background": "#000000"
+                                    },
+                                    "action": {
+                                        "type": "$network.request",
+                                        "options": {
+                                            "method": "post",
+                                            "url": "{{$get.base_url+'/api/me'}}",
+                                            "data": {
+                                                "email": "{{$get.account}}",
+                                                "password": "{{$get.password}}"
+                                            }
+                                        },
+                                        "success": {
+                                            "type": "$utils.alert",
+                                            "options": {
+                                                "text": "{{$jason.token}}",
+                                                "type": "warning"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
 }
